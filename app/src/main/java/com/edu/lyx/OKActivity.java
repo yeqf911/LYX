@@ -49,6 +49,7 @@ public class OKActivity extends AppCompatActivity implements View.OnClickListene
         }
     }
 
+    // 将密码存储到数据库中
     private void storePassword() {
         String title = tvTitle.getText().toString();
         String pass = tvPassword.getText().toString();

@@ -54,6 +54,7 @@ public class PasswordListActivity extends FragmentActivity {
         });
     }
 
+    // 初始化数据，数据是从数据库读取的，数据库是sqlite
     private void initData() {
         Cursor result = dbHelper.getReadableDatabase().query(SqliteHelper.PASSWORD_TABLE,
                 new String[]{"id", "title", "password"},

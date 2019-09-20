@@ -49,6 +49,7 @@ public class AddPasswordActivity extends AppCompatActivity {
         scGantajhao = findViewById(R.id.gantanhao);
         scAt = findViewById(R.id.at);
 
+        // 点击保存密码所做的操作
         storeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,6 +66,8 @@ public class AddPasswordActivity extends AppCompatActivity {
         });
 
         generateBtn = findViewById(R.id.generate);
+
+        // 点击生成密码按钮所做的操作
         generateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,6 +84,7 @@ public class AddPasswordActivity extends AppCompatActivity {
         });
     }
 
+    // 密码校验成功转到 校验成功的 activity
     private void startOKActivity(String title, String password) {
         Intent intent = new Intent(this, OKActivity.class);
         intent.putExtra("title", title);
@@ -88,12 +92,14 @@ public class AddPasswordActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // 密码校验失败转到校验失败的 activity
     private void startFailureActivity(String reason) {
         Intent intent = new Intent(this, FailureActivity.class);
         intent.putExtra("reason", reason);
         startActivity(intent);
     }
 
+    // 根据界面上的选项创建密码
     private String generatePass(int byteCount, boolean lower, boolean upper, boolean number, boolean gantanhao, boolean at) {
         String tmpStr = "";
         if (lower) {

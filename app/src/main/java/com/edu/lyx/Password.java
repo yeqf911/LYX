@@ -1,5 +1,6 @@
 package com.edu.lyx;
 
+// 密码实体类
 public class Password {
     private String title;
     private String password;
